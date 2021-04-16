@@ -1,0 +1,18 @@
+name: 'AutoAssignTeam'
+description: 'Run script that auto-assigns a team as a PR reviewer'
+branding:
+  icon: 'at-sign'
+  color: 'red'
+inputs:
+  approvals:
+    description: 'Required approving review count'
+    required: true
+  github-token:
+    description: 'The token to use'
+    required: true
+  team-name:
+    description: 'The name of the team which will be assigned as a reviewer'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
